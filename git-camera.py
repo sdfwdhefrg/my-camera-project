@@ -9,8 +9,12 @@ while True:
     if not ret:
         break
     cv2.imshow('camera', frame)
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    key = cv2.waitKey(1) & 0xFF == ord('q')
+    if key == ord('q'):
         break
+    elif key == ord('s'):
+        cv2.imwrite('screenshot.jpg',frame)
+        print('截图已保存')
 cap.release()
 cv2.destroyAllWindows()
 
