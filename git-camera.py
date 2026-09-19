@@ -9,7 +9,7 @@ while True:
     if not ret:
         break
     cv2.imshow('camera', frame)
-    key = cv2.waitKey(1) & 0xFF == ord('q')
+    key = cv2.waitKey(1) & 0xFF#等于True还是false
     if key == ord('q'):
         break
     elif key == ord('s'):
@@ -17,6 +17,8 @@ while True:
         print('截图已保存')
 cap.release()
 cv2.destroyAllWindows()
+print('你好')
+
 
 
 
